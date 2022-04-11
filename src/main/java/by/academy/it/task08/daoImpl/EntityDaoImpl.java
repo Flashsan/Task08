@@ -232,28 +232,33 @@ public class EntityDaoImpl implements EntityDao {
         }
     }
 
-    /**
-     *
-     */
     @Override
     public void deleteAll() {
-        int deletedCount = 0;
-        try (
-                Connection connection = getConnection();
-                Statement statement = connection.createStatement();
-        ) {
-            deletedCount =
-                    statement.executeUpdate(// DELETE FROM %s
-                            String.format(DELETE_ALL,
-                                    tableName));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        if (deletedCount != 1) {
-            System.out.println(
-                    "Deletion transaction failed (deletedCount != 1)");
-        }
+
     }
+
+//    /**
+//     *
+//     */
+//    @Override
+//    public void deleteAll() {
+//        int deletedCount = 0;
+//        try (
+//                Connection connection = getConnection();
+//                Statement statement = connection.createStatement();
+//        ) {
+//            deletedCount =
+//                    statement.executeUpdate(// DELETE FROM %s
+//                            String.format(DELETE_ALL,
+//                                    tableName));
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        if (deletedCount != 1) {
+//            System.out.println(
+//                    "Deletion transaction failed (deletedCount != 1)");
+//        }
+//    }
 
     /**
      * @param entity

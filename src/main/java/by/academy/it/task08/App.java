@@ -6,6 +6,8 @@ import by.academy.it.task08.entity.CarEntity;
 
 import java.util.Map;
 
+import static by.academy.it.task08.jdbc.JDBCUtils.getConnection;
+
 /**
  * There is a Car entity, it has
  * - id;
@@ -52,6 +54,7 @@ final class App {
      * @param args
      */
     public static void main(final String[] args) {
+
         /**
          *
          */
@@ -107,11 +110,6 @@ final class App {
             System.out.printf("Key: %s  Object: %s \n", item.getKey(), item.getValue().toString());
         }
 
-        dao.deleteAll();
-
-        for (Map.Entry<Long, Object> item : list.entrySet()) {
-            System.out.printf("Key: %s  Object: %s \n", item.getKey(), item.getValue().toString());
-        }
 
     }
 }

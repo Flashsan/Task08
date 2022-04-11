@@ -49,19 +49,6 @@ public class CarEntity {
     }
 
     /**
-     * @param modelOWn
-     * @param colorOWn
-     * @param coastOWn
-     */
-    public CarEntity(final String modelOWn,
-                     final String colorOWn,
-                     final String coastOWn) {
-        this.model = modelOWn;
-        this.color = colorOWn;
-        this.coast = coastOWn;
-    }
-
-    /**
      * @param o
      * @return -
      */
