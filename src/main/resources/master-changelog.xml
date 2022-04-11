@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="1" author="by_Grigorovich" labels="example-label" context="example-context">
+        <comment>example-comment</comment>
+        <createTable tableName="car">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="model" type="varchar(50)"></column>
+            <column name="color" type="varchar(50)"/>
+            <column name="coast" type="varchar(50)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="by_Grigorovich" labels="example-label" context="example-context">
+        <comment>example-comment</comment>
+        <insert tableName="car">
+            <column name="id" value="1"></column>
+            <column name="model" value="Audi A4"></column>
+            <column name="color" value="Black"></column>
+            <column name="coast" value="8000$"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet id="3" author="by_Grigorovich" labels="example-label" context="example-context">
+        <comment>example-comment</comment>
+        <insert tableName="car">
+            <column name="id" value="2"></column>
+            <column name="model" value="Audi A4"></column>
+            <column name="color" value="White"></column>
+            <column name="coast" value="10000$"></column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
